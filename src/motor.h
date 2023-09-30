@@ -13,8 +13,8 @@ class Motor
   int _speedMax;
   int _speedSlow;
 
-  void move_A(int);
-  void move_B(int);
+  // void move_A(int);
+  // void move_B(int);
 
 public:
   Motor(int, int, int, int);
@@ -28,6 +28,8 @@ public:
   void left(int, int);
   void right(int, int);
   void stop();
+  void move_A(int);
+  void move_B(int);
 
 };
 
