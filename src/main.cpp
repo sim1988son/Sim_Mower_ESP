@@ -1,14 +1,19 @@
-#include <Arduino.h>
-#include "config.h"
-#include "motor.h"
+// !!!!BOARD !!!
+#define MOWER_ESP
 
-Motor motor(MA1, MA2, MB1, MB2);
+
+#include <Arduino.h>
+#include "mower.h"
+
+
+MowerClass *mower = MowerClass::getMower();
 
 void setup(){
-motor.begin();
-
+    mower->begin();
+    mower->motor->go(255,255);
+    
 }
 
 void loop(){
-
+    // robot.loop();
 }
